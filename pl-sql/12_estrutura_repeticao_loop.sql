@@ -1,0 +1,21 @@
+--ESTRUTURA DE REPETIÇÃO
+
+--LOOP
+
+SELECT * FROM CLIENTE;
+
+DECLARE
+    v_SEGMERCADO_ID CLIENTE.SEGMERCADO_ID%type := 1;
+    v_I NUMBER(3) := 1;
+BEGIN
+--INICIO DO LOOP
+   LOOP 
+		--OQ FAZER
+        atualizar_cli_seg_mercado(v_I, v_SEGMERCADO_ID);
+		--INCREMENTAR CONTADOR
+        v_I := v_I + 1;
+	--CONDIÇÃO DE SAÍDA
+   EXIT WHEN v_I > 6;
+   --FIM DO LOOP
+   END LOOP;
+END;
